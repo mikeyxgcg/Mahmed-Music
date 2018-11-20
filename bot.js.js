@@ -107,7 +107,7 @@ client.on('message', async msg => {
         const permissions = voiceChannel.permissionsFor(msg.client.user);
         
         if (!permissions.has('CONNECT')) {
-    client.on('ready',async () => { client.channels.find(ch => ch.id === "اي دي الروم الصوتية" && ch.type === 'voice').join(); });
+
 			return msg.channel.send("ليست لدي صلاحيات للدخول الى الروم");
         }
         
@@ -316,7 +316,7 @@ client.on('message', message => {
     if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (!)**')
+        .setDescription('**برفكس البوت (m)**')
         .addField('play', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
         .addField('disconnect', 'الخروج من رومك الصوتي')
