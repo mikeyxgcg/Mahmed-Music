@@ -107,7 +107,7 @@ client.on('message', async msg => {
         const permissions = voiceChannel.permissionsFor(msg.client.user);
         
         if (!permissions.has('CONNECT')) {
-
+    client.on('ready',async () => { client.channels.find(ch => ch.id === "اي دي الروم الصوتية" && ch.type === 'voice').join(); });
 			return msg.channel.send("ليست لدي صلاحيات للدخول الى الروم");
         }
         
